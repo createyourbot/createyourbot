@@ -123,7 +123,7 @@ footer { border-top: 1px solid var(--border); padding: 2.5rem 5%; display: flex;
 footer p { font-size: 0.82rem; color: var(--gray); }
 
 /* REVEAL */
-.reveal { opacity: 1; }
+
 
 
 @media (max-width: 768px) {
@@ -159,12 +159,12 @@ footer p { font-size: 0.82rem; color: var(--gray); }
 
 <section class="how" id="how">
   <div class="how-inner">
-    <div class="reveal">
+    <div>
       <div class="section-label">How it works</div>
       <h2 class="section-title">Up and running in four simple steps</h2>
       <p class="section-sub">No technical skills needed. We handle everything.</p>
     </div>
-    <div class="steps reveal">
+    <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
         <h3>Tell us about your business</h3>
@@ -192,11 +192,11 @@ footer p { font-size: 0.82rem; color: var(--gray); }
 <section class="demo" id="demo">
   <div class="demo-inner">
     <div>
-      <div class="section-label reveal">Live Demo</div>
-      <h2 class="section-title reveal">Talk to a bot, right now</h2>
-      <p class="section-sub reveal">A quick demo to show you what's possible. Your actual bot will be smarter and trained on your business.</p>
+      <div class="section-label">Live Demo</div>
+      <h2 class="section-title">Talk to a bot, right now</h2>
+      <p class="section-sub">A quick demo to show you what's possible. Your actual bot will be smarter and trained on your business.</p>
     </div>
-    <div class="chat-window reveal">
+    <div class="chat-window">
       <div class="chat-header">
         <div class="bot-avatar">AI</div>
         <div>
@@ -217,12 +217,12 @@ footer p { font-size: 0.82rem; color: var(--gray); }
 
 <section class="pricing" id="pricing">
   <div class="pricing-inner">
-    <div class="reveal">
+    <div>
       <div class="section-label">Pricing</div>
       <h2 class="section-title">Simple, honest pricing</h2>
       <p class="section-sub">No hidden fees. No setup charges. Cancel anytime.</p>
     </div>
-    <div class="plans reveal">
+    <div class="plans">
       <div class="plan">
         <div class="plan-name">Starter</div>
         <div class="plan-price">Rs. 1,999</div>
@@ -268,7 +268,7 @@ footer p { font-size: 0.82rem; color: var(--gray); }
 </section>
 
 <section class="contact" id="contact">
-  <div class="contact-inner reveal">
+  <div class="contact-inner">
     <div class="section-label">Contact</div>
     <h2 class="section-title">Let's get your bot live</h2>
     <p class="section-sub">Have questions? Want a free demo for your business? Reach out and we will reply within a few hours.</p>
@@ -288,11 +288,7 @@ footer p { font-size: 0.82rem; color: var(--gray); }
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-var reveals = document.querySelectorAll('.reveal');
-var observer = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.12 });
-reveals.forEach(function(el) { observer.observe(el); });
+
 
 var responses = {
   price:   'We have three plans: Starter at Rs.1,999/month, Smart at Rs.3,999/month, and Pro at Rs.7,999/month. All include setup at no extra cost!',
