@@ -37,7 +37,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 .how-inner { max-width: 1100px; margin: 0 auto; }
 .section-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #2a5cff; font-weight: 500; margin-bottom: 1rem; }
 .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 3.5vw, 3rem); letter-spacing: -0.02em; line-height: 1.15; max-width: 560px; margin-bottom: 1rem; color: #0f0f0f; }
-.section-sub { color: #6b6b6b; font-weight: 300; max-width: 440px; font-size: 1rem; margin-bottom: 3rem; }
+.section-sub { color: #6b6b6b; font-weight: 300; max-width: 500px; font-size: 1rem; margin-bottom: 3rem; }
 .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border: 1px solid #e8e8e4; }
 .step { padding: 2.5rem; border-right: 1px solid #e8e8e4; }
 .step:last-child { border-right: none; }
@@ -72,29 +72,35 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 
 /* PRICING */
 .pricing { padding: 6rem 5%; background: #fafaf8; border-top: 1px solid #e8e8e4; }
-.pricing-inner { max-width: 1100px; margin: 0 auto; }
-.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 0; }
-.plan { border: 1px solid #e8e8e4; border-radius: 12px; padding: 2.5rem; position: relative; background: #fafaf8; }
+.pricing-inner { max-width: 1200px; margin: 0 auto; }
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.25rem; }
+.plan { border: 1px solid #e8e8e4; border-radius: 12px; padding: 2rem; position: relative; background: #fafaf8; display: flex; flex-direction: column; }
 .plan.hot { background: #0f0f0f; color: #fafaf8; border-color: #0f0f0f; }
-.badge2 { position: absolute; top: -12px; left: 2rem; background: #2a5cff; color: white; font-size: 0.72rem; font-weight: 500; padding: 0.25rem 0.85rem; border-radius: 100px; text-transform: uppercase; }
-.plan-tier { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: #6b6b6b; margin-bottom: 1rem; }
+.badge2 { position: absolute; top: -12px; left: 1.5rem; background: #2a5cff; color: white; font-size: 0.72rem; font-weight: 500; padding: 0.25rem 0.85rem; border-radius: 100px; text-transform: uppercase; }
+.plan-tier { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: #6b6b6b; margin-bottom: 0.75rem; }
 .plan.hot .plan-tier { color: #888; }
-.plan-price { font-family: 'DM Serif Display', serif; font-size: 2.8rem; line-height: 1; margin-bottom: 0.2rem; color: #0f0f0f; }
+.plan-price { font-family: 'DM Serif Display', serif; font-size: 2.4rem; line-height: 1; margin-bottom: 0.2rem; color: #0f0f0f; }
 .plan.hot .plan-price { color: #fafaf8; }
-.plan-per { font-size: 0.85rem; color: #6b6b6b; margin-bottom: 2rem; }
+.plan-per { font-size: 0.82rem; color: #6b6b6b; margin-bottom: 0.5rem; }
 .plan.hot .plan-per { color: #888; }
-.features { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 2.5rem; }
-.features li { font-size: 0.9rem; display: flex; gap: 0.75rem; font-weight: 300; color: #0f0f0f; }
+.plan-channels { font-size: 0.8rem; font-weight: 500; color: #2a5cff; margin-bottom: 0.2rem; }
+.plan.hot .plan-channels { color: #6b8aff; }
+.plan-chats { font-size: 0.78rem; color: #6b6b6b; margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #e8e8e4; }
+.plan.hot .plan-chats { color: #888; border-bottom-color: #222; }
+.features { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; flex: 1; }
+.features li { font-size: 0.88rem; display: flex; gap: 0.6rem; font-weight: 300; color: #0f0f0f; align-items: flex-start; }
 .plan.hot .features li { color: #ddd; }
-.tick { color: #2a5cff; font-weight: 700; flex-shrink: 0; }
+.tick { color: #2a5cff; font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
 .plan.hot .tick { color: #6b8aff; }
-.plan-cta { display: block; text-align: center; padding: 0.9rem; border-radius: 100px; font-size: 0.9rem; font-weight: 500; border: 1px solid #e8e8e4; color: #0f0f0f; background: transparent; }
+.plan-cta { display: block; text-align: center; padding: 0.85rem; border-radius: 100px; font-size: 0.88rem; font-weight: 500; border: 1px solid #e8e8e4; color: #0f0f0f; background: transparent; margin-top: auto; }
+.plan-cta:hover { background: #eef1ff; border-color: #2a5cff; color: #2a5cff; }
 .plan.hot .plan-cta { background: white; color: #0f0f0f; border-color: white; }
+.plan.hot .plan-cta:hover { opacity: 0.9; }
 
 /* CONTACT */
 .contact { padding: 6rem 5%; background: #fafaf8; border-top: 1px solid #e8e8e4; }
 .contact-inner { max-width: 1100px; margin: 0 auto; }
-.email-card { display: inline-flex; align-items: center; gap: 1.25rem; border: 1px solid #e8e8e4; border-radius: 12px; padding: 1.75rem 2.5rem; background: #fafaf8; margin-top: 0; }
+.email-card { display: inline-flex; align-items: center; gap: 1.25rem; border: 1px solid #e8e8e4; border-radius: 12px; padding: 1.75rem 2.5rem; background: #fafaf8; }
 .email-icon { font-size: 1.8rem; }
 .email-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #6b6b6b; margin-bottom: 0.25rem; }
 .email-val { font-size: 1rem; font-weight: 500; color: #0f0f0f; }
@@ -109,6 +115,7 @@ footer p { font-size: 0.82rem; color: #6b6b6b; }
   .demo-inner { grid-template-columns: 1fr; gap: 3rem; }
   .stats { gap: 2rem; }
   .step { border-right: none; border-bottom: 1px solid #e8e8e4; }
+  .plans { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -127,7 +134,7 @@ footer p { font-size: 0.82rem; color: #6b6b6b; }
 <section class="hero">
   <div class="badge">Made for Indian Businesses</div>
   <h1>Give your business an <em>AI brain</em> that never sleeps</h1>
-  <p>Instant chatbots for your website. Capture leads, answer questions, and book appointments automatically.</p>
+  <p>Instant chatbots for your website, Telegram, and WhatsApp. Capture leads and book appointments automatically.</p>
   <div class="btn-row">
     <a href="#demo" class="btn-dark">Try a Live Demo</a>
     <a href="#pricing" class="btn-light">See Pricing</a>
@@ -202,48 +209,78 @@ footer p { font-size: 0.82rem; color: #6b6b6b; }
   <div class="pricing-inner">
     <div class="section-tag">Pricing</div>
     <h2 class="section-title">Simple, honest pricing</h2>
-    <p class="section-sub">No hidden fees. No setup charges. Cancel anytime.</p>
+    <p class="section-sub">No hidden fees. No setup charges. WhatsApp available on Pro and Elite plans only. Cancel anytime.</p>
     <div class="plans">
+
       <div class="plan">
         <div class="plan-tier">Starter</div>
         <div class="plan-price">Rs. 1,999</div>
         <div class="plan-per">per month</div>
+        <div class="plan-channels">Website Bot</div>
+        <div class="plan-chats">500 chats / month</div>
         <ul class="features">
-          <li><span class="tick">&#10003;</span> Website chatbot</li>
+          <li><span class="tick">&#10003;</span> Website chatbot (24/7)</li>
           <li><span class="tick">&#10003;</span> Answers FAQs automatically</li>
-          <li><span class="tick">&#10003;</span> Collects name and phone number</li>
+          <li><span class="tick">&#10003;</span> Collects name and phone</li>
           <li><span class="tick">&#10003;</span> Email notification to you</li>
-          <li><span class="tick">&#10003;</span> Up to 500 chats per month</li>
+          <li><span class="tick">&#10003;</span> 500 chats per month</li>
         </ul>
         <a href="#contact" class="plan-cta">Get Started</a>
       </div>
-      <div class="plan hot">
-        <div class="badge2">Most Popular</div>
-        <div class="plan-tier">Smart</div>
-        <div class="plan-price">Rs. 3,999</div>
+
+      <div class="plan">
+        <div class="plan-tier">Growth</div>
+        <div class="plan-price">Rs. 2,999</div>
         <div class="plan-per">per month</div>
+        <div class="plan-channels">Website + Telegram</div>
+        <div class="plan-chats">1,000 chats / month</div>
         <ul class="features">
           <li><span class="tick">&#10003;</span> Everything in Starter</li>
+          <li><span class="tick">&#10003;</span> Telegram bot included</li>
+          <li><span class="tick">&#10003;</span> Smarter AI responses</li>
           <li><span class="tick">&#10003;</span> AI lead scoring</li>
           <li><span class="tick">&#10003;</span> Auto email reply to leads</li>
-          <li><span class="tick">&#10003;</span> Weekly lead report</li>
-          <li><span class="tick">&#10003;</span> Up to 2,000 chats per month</li>
+          <li><span class="tick">&#10003;</span> 1,000 chats per month</li>
         </ul>
         <a href="#contact" class="plan-cta">Get Started</a>
       </div>
-      <div class="plan">
+
+      <div class="plan hot">
+        <div class="badge2">Most Popular</div>
         <div class="plan-tier">Pro</div>
-        <div class="plan-price">Rs. 7,999</div>
+        <div class="plan-price">Rs. 5,999</div>
         <div class="plan-per">per month</div>
+        <div class="plan-channels">Website + Telegram + WhatsApp</div>
+        <div class="plan-chats">2,000 chats / month</div>
         <ul class="features">
-          <li><span class="tick">&#10003;</span> Everything in Smart</li>
+          <li><span class="tick">&#10003;</span> Everything in Growth</li>
+          <li><span class="tick">&#10003;</span> WhatsApp Business bot</li>
           <li><span class="tick">&#10003;</span> Appointment booking</li>
           <li><span class="tick">&#10003;</span> Payment link sending</li>
           <li><span class="tick">&#10003;</span> Google Sheets CRM sync</li>
-          <li><span class="tick">&#10003;</span> Unlimited chats</li>
+          <li><span class="tick">&#10003;</span> Weekly lead report</li>
+          <li><span class="tick">&#10003;</span> 2,000 chats per month</li>
         </ul>
         <a href="#contact" class="plan-cta">Get Started</a>
       </div>
+
+      <div class="plan">
+        <div class="plan-tier">Elite</div>
+        <div class="plan-price">Rs. 9,999</div>
+        <div class="plan-per">per month</div>
+        <div class="plan-channels">Website + Telegram + WhatsApp</div>
+        <div class="plan-chats">5,000 chats / month</div>
+        <ul class="features">
+          <li><span class="tick">&#10003;</span> Everything in Pro</li>
+          <li><span class="tick">&#10003;</span> 5,000 chats per month</li>
+          <li><span class="tick">&#10003;</span> Hindi + English support</li>
+          <li><span class="tick">&#10003;</span> Custom bot personality</li>
+          <li><span class="tick">&#10003;</span> Monthly strategy call</li>
+          <li><span class="tick">&#10003;</span> Priority support</li>
+        </ul>
+        <a href="#contact" class="plan-cta">Get Started</a>
+      </div>
+
     </div>
   </div>
 </section>
@@ -272,13 +309,15 @@ footer p { font-size: 0.82rem; color: #6b6b6b; }
 
 <script>
 var responses = {
-  price:   'We have three plans: Starter at Rs.1,999/month, Smart at Rs.3,999/month, and Pro at Rs.7,999/month. All plans include setup at no extra cost!',
-  pricing: 'We have three plans: Starter at Rs.1,999/month, Smart at Rs.3,999/month, and Pro at Rs.7,999/month. All plans include setup at no extra cost!',
-  cost:    'We have three plans: Starter at Rs.1,999/month, Smart at Rs.3,999/month, and Pro at Rs.7,999/month. All plans include setup at no extra cost!',
-  work:    'Simple! We train your AI on your business info and embed the chatbot on your website. Every lead goes straight to your email.',
+  price:   'We have four plans: Starter at Rs.1,999, Growth at Rs.2,999, Pro at Rs.5,999, and Elite at Rs.9,999 per month. WhatsApp is included in Pro and Elite.',
+  pricing: 'We have four plans: Starter at Rs.1,999, Growth at Rs.2,999, Pro at Rs.5,999, and Elite at Rs.9,999 per month. WhatsApp is included in Pro and Elite.',
+  cost:    'We have four plans: Starter at Rs.1,999, Growth at Rs.2,999, Pro at Rs.5,999, and Elite at Rs.9,999 per month.',
+  whatsapp: 'WhatsApp bot is available on our Pro (Rs.5,999) and Elite (Rs.9,999) plans. These plans also include Website and Telegram bots.',
+  telegram: 'Telegram bot is included in Growth, Pro, and Elite plans starting at Rs.2,999 per month.',
+  work:    'Simple! We train your AI on your business info and embed the chatbot on your website, Telegram, or WhatsApp. Every lead goes straight to your email.',
   setup:   'Setup takes less than 24 hours. Share your business details, we build and deploy your bot. No technical skills needed!',
-  hi:      'Hello! I am the CreateYourBot demo assistant. Ask me about pricing, how it works, or how to get started!',
-  hello:   'Hello! I am the CreateYourBot demo assistant. Ask me about pricing, how it works, or how to get started!',
+  hi:      'Hello! I am the CreateYourBot demo assistant. Ask me about pricing, WhatsApp, Telegram, or how to get started!',
+  hello:   'Hello! I am the CreateYourBot demo assistant. Ask me about pricing, WhatsApp, Telegram, or how to get started!',
   hey:     'Hey! Happy to help. Ask me about our plans, how bots work, or how to get started!'
 };
 
