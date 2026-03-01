@@ -4,82 +4,66 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CreateYourBot - AI Chatbots for Indian Businesses</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-:root {
-  --black: #0f0f0f; --white: #fafaf8; --accent: #2a5cff;
-  --accent-light: #eef1ff; --gray: #6b6b6b; --border: #e8e8e4;
-  --serif: 'DM Serif Display', Georgia, serif;
-  --sans: 'DM Sans', sans-serif;
-}
-html { scroll-behavior: smooth; }
-body { font-family: var(--sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; background: #fafaf8; color: #0f0f0f; font-size: 16px; line-height: 1.6; }
+a { text-decoration: none; }
 
 /* NAV */
-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 5%; background: rgba(250,250,248,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-.nav-logo { font-family: var(--serif); font-size: 1.2rem; color: var(--black); text-decoration: none; }
-.nav-logo span { color: var(--accent); }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 5%; background: #fafaf8; border-bottom: 1px solid #e8e8e4; }
+.logo { font-family: 'DM Serif Display', serif; font-size: 1.2rem; color: #0f0f0f; }
+.logo span { color: #2a5cff; }
 .nav-right { display: flex; align-items: center; gap: 1.5rem; }
-.nav-link { font-size: 0.88rem; color: var(--gray); text-decoration: none; }
-.nav-link:hover { color: var(--black); }
-.nav-cta { background: var(--black); color: var(--white); padding: 0.55rem 1.4rem; border-radius: 100px; font-size: 0.85rem; font-weight: 500; text-decoration: none; }
-.nav-cta:hover { opacity: 0.75; }
+.nav-link { font-size: 0.88rem; color: #6b6b6b; }
+.nav-btn { background: #0f0f0f; color: #fafaf8; padding: 0.55rem 1.4rem; border-radius: 100px; font-size: 0.85rem; font-weight: 500; }
 
 /* HERO */
-.hero { background: #fafaf8; color: #0f0f0f; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 5% 5rem; }
-.hero-badge { display: inline-flex; align-items: center; background: var(--accent-light); color: var(--accent); font-size: 0.78rem; font-weight: 500; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 2rem; letter-spacing: 0.02em; text-transform: uppercase; }
-.hero h1 { font-family: var(--serif); font-size: clamp(2.8rem, 6vw, 5.5rem); line-height: 1.08; letter-spacing: -0.03em; max-width: 800px; margin-bottom: 1.5rem; }
-.hero h1 em { font-style: italic; color: var(--accent); }
-.hero p { font-size: 1.1rem; color: var(--gray); max-width: 480px; font-weight: 300; margin-bottom: 2.5rem; }
-.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
-.btn-primary { background: var(--black); color: var(--white); padding: 0.9rem 2.2rem; border-radius: 100px; font-size: 0.95rem; font-weight: 500; text-decoration: none; }
-.btn-primary:hover { opacity: 0.85; }
-.btn-secondary { background: transparent; color: var(--black); padding: 0.9rem 2.2rem; border-radius: 100px; font-size: 0.95rem; text-decoration: none; border: 1px solid var(--border); }
-.btn-secondary:hover { background: var(--accent-light); }
-.hero-stats { display: flex; gap: 3rem; margin-top: 5rem; flex-wrap: wrap; justify-content: center; }
+.hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 8rem 5% 5rem; background: #fafaf8; }
+.badge { display: inline-block; background: #eef1ff; color: #2a5cff; font-size: 0.78rem; font-weight: 500; padding: 0.4rem 1rem; border-radius: 100px; margin-bottom: 2rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.hero h1 { font-family: 'DM Serif Display', serif; font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.1; letter-spacing: -0.02em; max-width: 800px; margin-bottom: 1.5rem; color: #0f0f0f; }
+.hero h1 em { font-style: italic; color: #2a5cff; }
+.hero p { font-size: 1.1rem; color: #6b6b6b; max-width: 480px; font-weight: 300; margin-bottom: 2.5rem; }
+.btn-row { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+.btn-dark { background: #0f0f0f; color: #fafaf8; padding: 0.9rem 2.2rem; border-radius: 100px; font-size: 0.95rem; font-weight: 500; }
+.btn-light { background: transparent; color: #0f0f0f; padding: 0.9rem 2.2rem; border-radius: 100px; font-size: 0.95rem; border: 1px solid #e8e8e4; }
+.stats { display: flex; gap: 3rem; margin-top: 5rem; flex-wrap: wrap; justify-content: center; }
 .stat { text-align: center; }
-.stat-num { font-family: var(--serif); font-size: 2rem; display: block; line-height: 1; }
-.stat-label { font-size: 0.8rem; color: var(--gray); margin-top: 0.25rem; }
-
-/* SHARED */
-section { padding: 6rem 5%; background: #fafaf8; }
-.section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 500; margin-bottom: 1rem; }
-.section-title { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 3rem); letter-spacing: -0.02em; line-height: 1.15; max-width: 560px; margin-bottom: 1rem; }
-.section-sub { color: var(--gray); font-weight: 300; max-width: 440px; font-size: 1rem; margin-bottom: 3.5rem; }
+.stat-num { font-family: 'DM Serif Display', serif; font-size: 2rem; display: block; color: #0f0f0f; }
+.stat-label { font-size: 0.8rem; color: #6b6b6b; margin-top: 0.2rem; }
 
 /* HOW IT WORKS */
-.how { border-top: 1px solid var(--border); }
+.how { padding: 6rem 5%; background: #fafaf8; border-top: 1px solid #e8e8e4; }
 .how-inner { max-width: 1100px; margin: 0 auto; }
-.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-.step { padding: 2.5rem; border: 1px solid var(--border); margin: -1px 0 0 -1px; transition: background 0.2s; }
-.step:hover { background: var(--accent-light); }
-.step-num { font-family: var(--serif); font-size: 2.5rem; color: var(--border); line-height: 1; margin-bottom: 1.5rem; }
-.step h3 { font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; }
-.step p { font-size: 0.9rem; color: var(--gray); font-weight: 300; line-height: 1.6; }
+.section-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #2a5cff; font-weight: 500; margin-bottom: 1rem; }
+.section-title { font-family: 'DM Serif Display', serif; font-size: clamp(1.8rem, 3.5vw, 3rem); letter-spacing: -0.02em; line-height: 1.15; max-width: 560px; margin-bottom: 1rem; color: #0f0f0f; }
+.section-sub { color: #6b6b6b; font-weight: 300; max-width: 440px; font-size: 1rem; margin-bottom: 3rem; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); border: 1px solid #e8e8e4; }
+.step { padding: 2.5rem; border-right: 1px solid #e8e8e4; }
+.step:last-child { border-right: none; }
+.step-num { font-family: 'DM Serif Display', serif; font-size: 2.5rem; color: #e8e8e4; line-height: 1; margin-bottom: 1.5rem; }
+.step h3 { font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; color: #0f0f0f; }
+.step p { font-size: 0.9rem; color: #6b6b6b; font-weight: 300; line-height: 1.6; }
 
 /* DEMO */
-.demo { background: var(--black); color: var(--white); border-top: 1px solid #222; }
-.demo-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-.demo .section-label { color: #6b8aff; }
-.demo .section-title { color: var(--white); }
+.demo { padding: 6rem 5%; background: #0f0f0f; border-top: 1px solid #222; }
+.demo-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.demo .section-tag { color: #6b8aff; }
+.demo .section-title { color: #fafaf8; }
 .demo .section-sub { color: #888; }
-.chat-window { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 16px; overflow: hidden; }
-.chat-header { padding: 1rem 1.25rem; border-bottom: 1px solid #2a2a2a; display: flex; align-items: center; gap: 0.75rem; }
-.bot-avatar { width: 32px; height: 32px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: white; font-weight: 500; }
+.chat-box { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 16px; overflow: hidden; }
+.chat-top { padding: 1rem 1.25rem; border-bottom: 1px solid #2a2a2a; display: flex; align-items: center; gap: 0.75rem; }
+.avatar { width: 32px; height: 32px; background: #2a5cff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: white; font-weight: 600; }
 .bot-name { font-weight: 500; font-size: 0.85rem; color: white; }
-.bot-status { font-size: 0.72rem; color: #4ade80; }
-.chat-messages { padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem; min-height: 280px; }
-.msg { max-width: 80%; font-size: 0.88rem; }
-.msg-bot { background: #252525; padding: 0.75rem 1rem; border-radius: 0 12px 12px 12px; color: #ddd; line-height: 1.5; }
-.msg-user { background: var(--accent); padding: 0.75rem 1rem; border-radius: 12px 12px 0 12px; color: white; align-self: flex-end; }
-.chat-input { padding: 1rem 1.25rem; border-top: 1px solid #2a2a2a; display: flex; gap: 0.75rem; }
-.chat-input input { flex: 1; background: #252525; border: 1px solid #333; border-radius: 8px; padding: 0.65rem 1rem; color: white; font-family: var(--sans); font-size: 0.85rem; outline: none; }
-.chat-input input::placeholder { color: #555; }
-.chat-input input:focus { border-color: var(--accent); }
-.send-btn { background: var(--accent); border: none; border-radius: 8px; padding: 0.65rem 1.25rem; color: white; cursor: pointer; font-size: 0.85rem; font-weight: 500; }
-.send-btn:hover { opacity: 0.85; }
+.online { font-size: 0.72rem; color: #4ade80; }
+.chat-body { padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem; min-height: 260px; }
+.bot-msg { background: #252525; padding: 0.75rem 1rem; border-radius: 0 12px 12px 12px; color: #ddd; line-height: 1.5; font-size: 0.88rem; max-width: 85%; }
+.user-msg { background: #2a5cff; padding: 0.75rem 1rem; border-radius: 12px 12px 0 12px; color: white; font-size: 0.88rem; max-width: 85%; align-self: flex-end; }
+.chat-foot { padding: 1rem 1.25rem; border-top: 1px solid #2a2a2a; display: flex; gap: 0.75rem; }
+.chat-foot input { flex: 1; background: #252525; border: 1px solid #333; border-radius: 8px; padding: 0.65rem 1rem; color: white; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; outline: none; }
+.chat-foot input::placeholder { color: #555; }
+.chat-foot input:focus { border-color: #2a5cff; }
+.send { background: #2a5cff; border: none; border-radius: 8px; padding: 0.65rem 1.25rem; color: white; cursor: pointer; font-size: 0.85rem; font-weight: 500; font-family: 'DM Sans', sans-serif; }
 .typing { display: flex; gap: 4px; align-items: center; padding: 0.75rem 1rem; background: #252525; border-radius: 0 12px 12px 12px; width: fit-content; }
 .dot { width: 6px; height: 6px; background: #555; border-radius: 50%; animation: bounce 1.2s infinite; }
 .dot:nth-child(2) { animation-delay: 0.2s; }
@@ -87,83 +71,80 @@ section { padding: 6rem 5%; background: #fafaf8; }
 @keyframes bounce { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-6px)} }
 
 /* PRICING */
-.pricing { border-top: 1px solid var(--border); }
+.pricing { padding: 6rem 5%; background: #fafaf8; border-top: 1px solid #e8e8e4; }
 .pricing-inner { max-width: 1100px; margin: 0 auto; }
-.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-.plan { border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; position: relative; transition: transform 0.2s, box-shadow 0.2s; }
-.plan:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
-.plan.featured { background: var(--black); color: var(--white); border-color: var(--black); }
-.plan-badge { position: absolute; top: -12px; left: 2rem; background: var(--accent); color: white; font-size: 0.72rem; font-weight: 500; padding: 0.25rem 0.85rem; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.05em; }
-.plan-name { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray); margin-bottom: 1rem; }
-.plan.featured .plan-name { color: #888; }
-.plan-price { font-family: var(--serif); font-size: 2.8rem; line-height: 1; margin-bottom: 0.25rem; letter-spacing: -0.02em; }
-.plan-period { font-size: 0.85rem; color: var(--gray); margin-bottom: 2rem; }
-.plan.featured .plan-period { color: #888; }
-.plan-features { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 2.5rem; }
-.plan-features li { font-size: 0.9rem; display: flex; gap: 0.75rem; font-weight: 300; align-items: flex-start; }
-.check { color: var(--accent); font-weight: 700; flex-shrink: 0; }
-.plan.featured .check { color: #6b8aff; }
-.plan-btn { display: block; text-align: center; padding: 0.9rem; border-radius: 100px; font-size: 0.9rem; font-weight: 500; text-decoration: none; border: 1px solid var(--border); color: var(--black); transition: all 0.2s; }
-.plan-btn:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
-.plan.featured .plan-btn { background: white; color: var(--black); border-color: white; }
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 0; }
+.plan { border: 1px solid #e8e8e4; border-radius: 12px; padding: 2.5rem; position: relative; background: #fafaf8; }
+.plan.hot { background: #0f0f0f; color: #fafaf8; border-color: #0f0f0f; }
+.badge2 { position: absolute; top: -12px; left: 2rem; background: #2a5cff; color: white; font-size: 0.72rem; font-weight: 500; padding: 0.25rem 0.85rem; border-radius: 100px; text-transform: uppercase; }
+.plan-tier { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: #6b6b6b; margin-bottom: 1rem; }
+.plan.hot .plan-tier { color: #888; }
+.plan-price { font-family: 'DM Serif Display', serif; font-size: 2.8rem; line-height: 1; margin-bottom: 0.2rem; color: #0f0f0f; }
+.plan.hot .plan-price { color: #fafaf8; }
+.plan-per { font-size: 0.85rem; color: #6b6b6b; margin-bottom: 2rem; }
+.plan.hot .plan-per { color: #888; }
+.features { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 2.5rem; }
+.features li { font-size: 0.9rem; display: flex; gap: 0.75rem; font-weight: 300; color: #0f0f0f; }
+.plan.hot .features li { color: #ddd; }
+.tick { color: #2a5cff; font-weight: 700; flex-shrink: 0; }
+.plan.hot .tick { color: #6b8aff; }
+.plan-cta { display: block; text-align: center; padding: 0.9rem; border-radius: 100px; font-size: 0.9rem; font-weight: 500; border: 1px solid #e8e8e4; color: #0f0f0f; background: transparent; }
+.plan.hot .plan-cta { background: white; color: #0f0f0f; border-color: white; }
 
 /* CONTACT */
-.contact { border-top: 1px solid var(--border); }
+.contact { padding: 6rem 5%; background: #fafaf8; border-top: 1px solid #e8e8e4; }
 .contact-inner { max-width: 1100px; margin: 0 auto; }
-.contact-card { display: inline-flex; align-items: center; gap: 1.25rem; border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem 2.5rem; text-decoration: none; color: var(--black); transition: all 0.2s; }
-.contact-card:hover { border-color: var(--accent); background: var(--accent-light); transform: translateY(-2px); }
-.contact-icon { font-size: 1.8rem; }
-.contact-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray); margin-bottom: 0.25rem; }
-.contact-value { font-size: 1rem; font-weight: 500; }
+.email-card { display: inline-flex; align-items: center; gap: 1.25rem; border: 1px solid #e8e8e4; border-radius: 12px; padding: 1.75rem 2.5rem; background: #fafaf8; margin-top: 0; }
+.email-icon { font-size: 1.8rem; }
+.email-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #6b6b6b; margin-bottom: 0.25rem; }
+.email-val { font-size: 1rem; font-weight: 500; color: #0f0f0f; }
 
 /* FOOTER */
-footer { border-top: 1px solid var(--border); padding: 2.5rem 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-.footer-logo { font-family: var(--serif); font-size: 1rem; }
-.footer-logo span { color: var(--accent); }
-footer p { font-size: 0.82rem; color: var(--gray); }
-
-/* REVEAL */
-
-
+footer { border-top: 1px solid #e8e8e4; padding: 2.5rem 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; background: #fafaf8; }
+.foot-logo { font-family: 'DM Serif Display', serif; font-size: 1rem; color: #0f0f0f; }
+.foot-logo span { color: #2a5cff; }
+footer p { font-size: 0.82rem; color: #6b6b6b; }
 
 @media (max-width: 768px) {
   .demo-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .hero-stats { gap: 2rem; }
+  .stats { gap: 2rem; }
+  .step { border-right: none; border-bottom: 1px solid #e8e8e4; }
 }
 </style>
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">Create<span>Your</span>Bot</a>
+  <div class="logo">Create<span>Your</span>Bot</div>
   <div class="nav-right">
     <a class="nav-link" href="#contact">Contact</a>
-    <a class="nav-cta" href="#pricing">Get Started</a>
+    <a class="nav-btn" href="#pricing">Get Started</a>
   </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">Made for Indian Businesses</div>
+  <div class="badge">Made for Indian Businesses</div>
   <h1>Give your business an <em>AI brain</em> that never sleeps</h1>
   <p>Instant chatbots for your website. Capture leads, answer questions, and book appointments automatically.</p>
-  <div class="hero-actions">
-    <a href="#demo" class="btn-primary">Try a Live Demo</a>
-    <a href="#pricing" class="btn-secondary">See Pricing</a>
+  <div class="btn-row">
+    <a href="#demo" class="btn-dark">Try a Live Demo</a>
+    <a href="#pricing" class="btn-light">See Pricing</a>
   </div>
-  <div class="hero-stats">
+  <div class="stats">
     <div class="stat"><span class="stat-num">24/7</span><div class="stat-label">Always online</div></div>
     <div class="stat"><span class="stat-num">24 hrs</span><div class="stat-label">Live and ready</div></div>
     <div class="stat"><span class="stat-num">3x</span><div class="stat-label">More leads captured</div></div>
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
 <section class="how" id="how">
   <div class="how-inner">
-    <div>
-      <div class="section-label">How it works</div>
-      <h2 class="section-title">Up and running in four simple steps</h2>
-      <p class="section-sub">No technical skills needed. We handle everything.</p>
-    </div>
+    <div class="section-tag">How it works</div>
+    <h2 class="section-title">Up and running in four simple steps</h2>
+    <p class="section-sub">No technical skills needed. We handle everything.</p>
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
@@ -189,132 +170,152 @@ footer p { font-size: 0.82rem; color: var(--gray); }
   </div>
 </section>
 
+<!-- DEMO -->
 <section class="demo" id="demo">
   <div class="demo-inner">
     <div>
-      <div class="section-label">Live Demo</div>
+      <div class="section-tag">Live Demo</div>
       <h2 class="section-title">Talk to a bot, right now</h2>
-      <p class="section-sub">A quick demo to show you what's possible. Your actual bot will be smarter and trained on your business.</p>
+      <p class="section-sub">A quick demo to show you what is possible. Your actual bot will be smarter and trained on your business.</p>
     </div>
-    <div class="chat-window">
-      <div class="chat-header">
-        <div class="bot-avatar">AI</div>
+    <div class="chat-box">
+      <div class="chat-top">
+        <div class="avatar">AI</div>
         <div>
           <div class="bot-name">CreateYourBot Assistant</div>
-          <div class="bot-status">Online</div>
+          <div class="online">Online</div>
         </div>
       </div>
-      <div class="chat-messages" id="chatMessages">
-        <div class="msg msg-bot">Hi! I am an AI assistant. Ask me anything about services, pricing, or how to get started!</div>
+      <div class="chat-body" id="chatBody">
+        <div class="bot-msg">Hi! I am an AI assistant. Ask me about pricing, how it works, or how to get started!</div>
       </div>
-      <div class="chat-input">
+      <div class="chat-foot">
         <input type="text" id="chatInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMsg()">
-        <button class="send-btn" onclick="sendMsg()">Send</button>
+        <button class="send" onclick="sendMsg()">Send</button>
       </div>
     </div>
   </div>
 </section>
 
+<!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="pricing-inner">
-    <div>
-      <div class="section-label">Pricing</div>
-      <h2 class="section-title">Simple, honest pricing</h2>
-      <p class="section-sub">No hidden fees. No setup charges. Cancel anytime.</p>
-    </div>
+    <div class="section-tag">Pricing</div>
+    <h2 class="section-title">Simple, honest pricing</h2>
+    <p class="section-sub">No hidden fees. No setup charges. Cancel anytime.</p>
     <div class="plans">
       <div class="plan">
-        <div class="plan-name">Starter</div>
+        <div class="plan-tier">Starter</div>
         <div class="plan-price">Rs. 1,999</div>
-        <div class="plan-period">per month</div>
-        <ul class="plan-features">
-          <li><span class="check">&#10003;</span> Website chatbot</li>
-          <li><span class="check">&#10003;</span> Answers FAQs automatically</li>
-          <li><span class="check">&#10003;</span> Collects name and phone number</li>
-          <li><span class="check">&#10003;</span> Email notification to you</li>
-          <li><span class="check">&#10003;</span> Up to 500 chats per month</li>
+        <div class="plan-per">per month</div>
+        <ul class="features">
+          <li><span class="tick">&#10003;</span> Website chatbot</li>
+          <li><span class="tick">&#10003;</span> Answers FAQs automatically</li>
+          <li><span class="tick">&#10003;</span> Collects name and phone number</li>
+          <li><span class="tick">&#10003;</span> Email notification to you</li>
+          <li><span class="tick">&#10003;</span> Up to 500 chats per month</li>
         </ul>
-        <a href="#contact" class="plan-btn">Get Started</a>
+        <a href="#contact" class="plan-cta">Get Started</a>
       </div>
-      <div class="plan featured">
-        <div class="plan-badge">Most Popular</div>
-        <div class="plan-name">Smart</div>
+      <div class="plan hot">
+        <div class="badge2">Most Popular</div>
+        <div class="plan-tier">Smart</div>
         <div class="plan-price">Rs. 3,999</div>
-        <div class="plan-period">per month</div>
-        <ul class="plan-features">
-          <li><span class="check">&#10003;</span> Everything in Starter</li>
-          <li><span class="check">&#10003;</span> AI lead scoring</li>
-          <li><span class="check">&#10003;</span> Auto email reply to leads</li>
-          <li><span class="check">&#10003;</span> Weekly lead report</li>
-          <li><span class="check">&#10003;</span> Up to 2,000 chats per month</li>
+        <div class="plan-per">per month</div>
+        <ul class="features">
+          <li><span class="tick">&#10003;</span> Everything in Starter</li>
+          <li><span class="tick">&#10003;</span> AI lead scoring</li>
+          <li><span class="tick">&#10003;</span> Auto email reply to leads</li>
+          <li><span class="tick">&#10003;</span> Weekly lead report</li>
+          <li><span class="tick">&#10003;</span> Up to 2,000 chats per month</li>
         </ul>
-        <a href="#contact" class="plan-btn">Get Started</a>
+        <a href="#contact" class="plan-cta">Get Started</a>
       </div>
       <div class="plan">
-        <div class="plan-name">Pro</div>
+        <div class="plan-tier">Pro</div>
         <div class="plan-price">Rs. 7,999</div>
-        <div class="plan-period">per month</div>
-        <ul class="plan-features">
-          <li><span class="check">&#10003;</span> Everything in Smart</li>
-          <li><span class="check">&#10003;</span> Appointment booking</li>
-          <li><span class="check">&#10003;</span> Payment link sending</li>
-          <li><span class="check">&#10003;</span> Google Sheets CRM sync</li>
-          <li><span class="check">&#10003;</span> Unlimited chats</li>
+        <div class="plan-per">per month</div>
+        <ul class="features">
+          <li><span class="tick">&#10003;</span> Everything in Smart</li>
+          <li><span class="tick">&#10003;</span> Appointment booking</li>
+          <li><span class="tick">&#10003;</span> Payment link sending</li>
+          <li><span class="tick">&#10003;</span> Google Sheets CRM sync</li>
+          <li><span class="tick">&#10003;</span> Unlimited chats</li>
         </ul>
-        <a href="#contact" class="plan-btn">Get Started</a>
+        <a href="#contact" class="plan-cta">Get Started</a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-inner">
-    <div class="section-label">Contact</div>
+    <div class="section-tag">Contact</div>
     <h2 class="section-title">Let's get your bot live</h2>
-    <p class="section-sub">Have questions? Want a free demo for your business? Reach out and we will reply within a few hours.</p>
-    <a href="/cdn-cgi/l/email-protection#b1d9d4dddddef1d2c3d4d0c5d4c8dec4c3d3dec59fd8df" class="contact-card">
-      <div class="contact-icon">&#9993;</div>
+    <p class="section-sub">Have questions? Want a free demo? Reach out and we will reply within a few hours.</p>
+    <div class="email-card">
+      <div class="email-icon">&#9993;</div>
       <div>
-        <div class="contact-label">Email us</div>
-        <div class="contact-value"><span class="__cf_email__" data-cfemail="d4bcb1b8b8bb94b7a6b1b5a0b1adbba1a6b6bba0fabdba">[email&#160;protected]</span></div>
+        <div class="email-label">Email us</div>
+        <div class="email-val">hello@createyourbot.in</div>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Create<span>Your</span>Bot</div>
+  <div class="foot-logo">Create<span>Your</span>Bot</div>
   <p>2025 createyourbot.in &middot; Built with love in India</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-
-
+<script>
 var responses = {
-  price:   'We have three plans: Starter at Rs.1,999/month, Smart at Rs.3,999/month, and Pro at Rs.7,999/month. All include setup at no extra cost!',
-  pricing: 'We have three plans: Starter at Rs.1,999/month, Smart at Rs.3,999/month, and Pro at Rs.7,999/month. All include setup at no extra cost!',
-  cost:    'We have three plans: Starter at Rs.1,999/month, Smart at Rs.3,999/month, and Pro at Rs.7,999/month. All include setup at no extra cost!',
-  work:    'Simple! We train your AI on your business info, then embed the chatbot on your website. Every lead is sent to your email instantly.',
-  setup:   'Setup takes less than 24 hours. You share your business details, we build and deploy your bot. No technical skills needed!',
-  hi:      'Hello! I am the CreateYourBot demo assistant. Ask me about pricing, how it works, setup time, or anything else!',
-  hello:   'Hello! I am the CreateYourBot demo assistant. Ask me about pricing, how it works, setup time, or anything else!',
+  price:   'We have three plans: Starter at Rs.1,999/month, Smart at Rs.3,999/month, and Pro at Rs.7,999/month. All plans include setup at no extra cost!',
+  pricing: 'We have three plans: Starter at Rs.1,999/month, Smart at Rs.3,999/month, and Pro at Rs.7,999/month. All plans include setup at no extra cost!',
+  cost:    'We have three plans: Starter at Rs.1,999/month, Smart at Rs.3,999/month, and Pro at Rs.7,999/month. All plans include setup at no extra cost!',
+  work:    'Simple! We train your AI on your business info and embed the chatbot on your website. Every lead goes straight to your email.',
+  setup:   'Setup takes less than 24 hours. Share your business details, we build and deploy your bot. No technical skills needed!',
+  hi:      'Hello! I am the CreateYourBot demo assistant. Ask me about pricing, how it works, or how to get started!',
+  hello:   'Hello! I am the CreateYourBot demo assistant. Ask me about pricing, how it works, or how to get started!',
   hey:     'Hey! Happy to help. Ask me about our plans, how bots work, or how to get started!'
 };
 
 function sendMsg() {
   var input = document.getElementById('chatInput');
-  var msgs = document.getElementById('chatMessages');
+  var body = document.getElementById('chatBody');
   var text = input.value.trim();
   if (!text) return;
-  msgs.innerHTML += '<div class="msg msg-user">' + text + '</div>';
+
+  var userDiv = document.createElement('div');
+  userDiv.className = 'user-msg';
+  userDiv.textContent = text;
+  body.appendChild(userDiv);
   input.value = '';
-  msgs.scrollTop = msgs.scrollHeight;
-  var typingEl = document.createElement('div');
-  typingEl.className = 'typing';
-  typingEl.innerHTML = '<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
-  msgs.appendChild(typingEl);
-  msgs.scrollTop = msgs.scrollHeight;
+  body.scrollTop = body.scrollHeight;
+
+  var typing = document.createElement('div');
+  typing.className = 'typing';
+  typing.innerHTML = '<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
+  body.appendChild(typing);
+  body.scrollTop = body.scrollHeight;
+
   var lower = text.toLowerCase();
   var reply = 'Great question! Email us at hello@createyourbot.in and we will get back to you shortly.';
   for (var key in responses) {
-    if (lower.indexOf(ke
+    if (lower.indexOf(key) !== -1) { reply = responses[key]; break; }
+  }
+
+  setTimeout(function() {
+    body.removeChild(typing);
+    var botDiv = document.createElement('div');
+    botDiv.className = 'bot-msg';
+    botDiv.textContent = reply;
+    body.appendChild(botDiv);
+    body.scrollTop = body.scrollHeight;
+  }, 1200);
+}
+</script>
+</body>
+</html>
